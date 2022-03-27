@@ -1,4 +1,5 @@
 import styles from './Links.module.css'
+import Link from 'next/link'
 
 export function Links() {
   const linkList = [
@@ -26,12 +27,14 @@ export function Links() {
 
   return (
     <div className={styles.grid}>
-      {linkList.map(el => {
+      {linkList.map((el, index) => {
         return (
-          <a href={el.link} className={styles.card} target="_blank" rel="noopener">
-            <h2 className={styles.title}>{el.title} &rarr;</h2>
-            <p className={styles.description}>{el.description}</p>
-          </a> 
+          <Link href={el.link} key={index}>
+            <a className={styles.card} target="_blank" rel="noopener">
+              <h2 className={styles.title}>{el.title} &rarr;</h2>
+              <p className={styles.description}>{el.description}</p>
+            </a>
+          </Link>
         )
       })}
     </div>
