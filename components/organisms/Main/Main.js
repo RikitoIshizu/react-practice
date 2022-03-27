@@ -1,4 +1,4 @@
-import styles from '/styles/Home.module.css'
+import styles from './Main.module.css'
 import { Links } from '/components/organisms/Links/Links.js'
 import { Headline } from '/components/organisms/Headline/Headline.js'
 
